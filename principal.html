@@ -4,10 +4,101 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/Style.css">
 </head>
 <body>
-    <h1>
-        Esto es un Título de prueba xddd
-    </h1>
+    <header>
+        <!-- TODO: Inicio NavBar -->
+        <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+            <div class="container-fluid justify-content-end">
+                <a class="navbar-brand" href="#"><img src="img/Logo pagina.png" alt="100    " height="100"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Dropdown link
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- TODO: Fin NavBar -->
+        <br>
+        <br><h1>Ofertas de la semanaaaa!!</h1> <!-- *Título provicional -->
+        <br>
+        <!--TODO: Inicio Carousel -->
+            <!--*Carousel de Ofertas -->
+        <div id="carouselExampleInterval" class="carousel slide w-50 mx-auto" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="10000">
+                <img src="img_test/perro01.webp" class="d-block w-100" alt="100" height="500">
+                </div>
+                <div class="carousel-item" data-bs-interval="10000">
+                <img src="img_test/perro02.png" class="d-block w-100" alt="100" height="500"> 
+                </div>
+                <div class="carousel-item" data-bs-interval="10000">
+                <img src="img_test/perro03.jpg" class="d-block w-100" alt="100" height="500">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h1> Adopta un peludito</h1> <!-- *Título provicional -->
+        <br>
+        <br>
+            <!--*Carousel de animalitos -->
+        <div id="carouselExampleInterval" class="carousel slide w-50 mx-auto" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="10000">
+                <img src="img_test/perro01.webp" class="d-block w-100" alt="100" height="500">
+                </div>
+                <div class="carousel-item" data-bs-interval="10000">
+                <img src="img_test/perro02.png" class="d-block w-100" alt="100" height="500"> 
+                </div>
+                <div class="carousel-item" data-bs-interval="10000">
+                <img src="img_test/perro03.jpg" class="d-block w-100" alt="100" height="500">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <!-- TODO: Fin Carousel -->
+
+    </header>
+    <hr>
+    
+    <footer>
+        <div id="contacto">
+            Esto es un ejemplo de la sección de contactos :D
+        </div>
+    </footer>
+    <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
