@@ -23,3 +23,43 @@ main{
     background-image: url("");
     background-size: cover ;
 }
+
+#modalText{
+    display: inline-block;
+    vertical-align: top;
+}
+
+#margen{
+    margin: 20px;
+}
+
+.checkbox-xl .form-check-input {
+    top: 1.2rem;
+    scale: 1.7;
+    margin-right: 0.8rem;
+    }
+
+#chackLabel{
+    font-size: 25px;
+    padding-top: 19px;
+    margin: 15;
+}
+
+#carritoTittle{
+    font-size: 300%;
+    text-align: center;
+}
+
+#carritoBody{
+    margin: 20px;
+    font-size: 175%;
+}
+#carritoPrecio{
+    text-align: end;
+    padding-top: 50px;
+    font-size: 200%;
+}
+#imgCenter{ /* Pedigree */
+    margin: 35px;
+    margin-left: 90px;
+}

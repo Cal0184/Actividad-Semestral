@@ -10,7 +10,7 @@
 <body>
     <header>
 <!-- TODO: Inicio NavBar -->
-        <nav class="navbar  navbar-expand-lg bg-body-tertiary " data-bs-theme="dark">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
             <div class="container-fluid justify-content-end">
                 <a class="navbar-brand" href="principal.html"><img src="img/Logo_pagina.png" alt="100 " height="100"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -40,37 +40,35 @@
                 </ul>
                 </div>
             </div>
-            
-        </nav>
 <!-- TODO: Fin NavBar -->
     </header>
     <main>
         <br>
-        <form class="row g-3">
+        <form id="margen" class="row g-3">
             <div class="col-md-6">
-                <label for="inputFirstName" class="form-label">Nombre</label>
+                <label for="inputFirstName" class="form-label" >Nombre</label>
                 <input type="text" class="form-control" id="inputFirstName">
             </div>
             <div class="col-md-6">
-                <label for="inputSecondName" class="form-label">Apellidos</label>
-                <input type="text" class="form-control" id="inputSecondName">
+                <label for="inputLastName" class="form-label">Apellidos</label>
+                <input type="text" class="form-control" id="inputLastName">
             </div>
             <div class="col-12">
                 <label for="inputEmail" class="form-label">Correo Electrónico</label>
-                <input type="text" class="form-control" id="inputAddress" placeholder="example@gmail.com">
+                <input type="text" class="form-control" id="inputEmail" placeholder="example@gmail.com">
             </div>
             <div class="col-md-6">
-                <label for="inputPassword4" class="form-label">Contraseña</label>
-                <input type="password" class="form-control" id="inputPassword4">
+                <label for="inputPassword" class="form-label">Contraseña</label>
+                <input type="password" class="form-control" id="inputPassword">
             </div>
             <div class="col-md-6">
-                <label for="inputPassword4" class="form-label">Confirmar Contraseña</label>
-                <input type="password" class="form-control" id="inputPassword4">
+                <label for="inputPassword1" class="form-label">Confirmar Contraseña</label>
+                <input type="password" class="form-control" id="inputPassword1">
             </div>
             
             <div class="col-12">
                 <label for="inputAddress" class="form-label">Dirección</label>
-                <input type="text" class="form-control" id="inputAddress2" placeholder="Example #0001">
+                <input type="text" class="form-control" id="inputAddress" placeholder=  "Example #0001">
             </div>
             <div class="col-md-6">
                 <label for="inputCity" class="form-label">Ciudad</label>
@@ -111,7 +109,7 @@
                 </div>
             </div>
             <div class="col-12">
-                <button  class="btn btn-primary"    type="submit">Iniciar Sesión</button>
+                <button  class="btn btn-success" type="submit">Regístrame</button>
             </div>
         </form>
         <br>

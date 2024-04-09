@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Pet Shop</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/Style.css">
 </head>
@@ -40,7 +40,10 @@
                 </ul>
                 </div>
             </div>
-            
+            <!-- *Botón del Modal (Login) -->
+        <button id="margen" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalLogin">
+            Login
+        </button>
         </nav>
 <!-- TODO: Fin NavBar -->
     </header>
@@ -74,13 +77,15 @@
 <!-- TODO: Fin Carousel -->
     <br>
 <!-- TODO: Inicio Cartas de animales -->
-        <div class="row row-cols-1 row-cols-md-3 g-10">
+        <div id="margen" class="row row-cols-1 row-cols-md-3 g-10">
             <div class="col container-fluid">
                 <div class="card h-100">
                     <img src="img_test/perro04.png" class="card-img-top" alt="100" height="350">
                     <div class="card-body">
                         <h5 class="card-title">Max</h5>
-                        <a href="#" class="btn btn-primary">¡Conócelo!</a>
+                        <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#modalPerro1">
+                            ¡Conócelo!
+                        </button>
                     </div>
                 </div>
             </div>
@@ -89,7 +94,9 @@
                     <img src="img_test/perro04.png" class="card-img-top" alt="100" height="350">
                     <div class="card-body">
                         <h5 class="card-title">Eugenio</h5>
-                        <a href="#" class="btn btn-primary">¡Conócelo!</a>
+                        <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#modalPerro2">
+                            ¡Conócelo!
+                        </button>
                     </div>
                 </div>
             </div>
@@ -98,12 +105,130 @@
                     <img src="img_test/perro04.png" class="card-img-top" alt="100" height="350">
                     <div class="card-body">
                         <h5 class="card-title">Takemichi</h5>
-                        <a href="#" class="btn btn-primary">¡Conócelo!</a>
+                        <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#modalPerro3">
+                            ¡Conócelo!
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
 <!-- TODO: Fin Cartas de animales -->
+<!-- TODO: Inicio modal "Conócelos" -->
+        <!-- *Modal Perro 1 -->
+        <div class="modal fade" id="modalPerro1" tabindex="-1" aria-labelledby="modalPerro1" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="modalPerro1">Max</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="img_test/perro04.png" alt="100" height="200" width="200">
+                    <p id="modalText">
+                        Max es definitivamente un perro. <br>
+                        También le gusta la comida de perro <br>
+                        y hacer cosas de perro. <br> <br>
+                        Rara vez maulla.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Salir</button>
+                    <a href=""> <!-- *Link al perro -->
+                        <button type="button" class="btn btn-primary">Not Exit</button> 
+                    </a>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- *Modal Perro 2 -->
+        <div class="modal fade" id="modalPerro2" tabindex="-1" aria-labelledby="modalPerro2" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="modalPerro2">Eugenio</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="img_test/perro04.png" alt="100" height="200" width="200">
+                    <p id="modalText">
+                        Eugenio es definitivamente un perro. <br>
+                        También le gusta la comida de perro <br>
+                        y hacer cosas de perro. <br> <br>
+                        Rara vez maulla.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Salir</button>
+                    <a href=""> <!-- *Link al perro -->
+                        <button type="button" class="btn btn-primary">Not Exit</button> 
+                    </a>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- *Modal Perro 3 -->
+        <div class="modal fade" id="modalPerro3" tabindex="-1" aria-labelledby="modalPerro3" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="modalPerro3">Takemichi</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="img_test/perro04.png" alt="100" height="200" width="200">
+                    <p id="modalText">
+                        Takemichi es definitivamente un <br> perro.
+                        También le gusta la comida <br> de perro 
+                        y hacer cosas de perro. <br> <br>
+                        Rara vez maulla.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Salir</button>
+                    <a href=""> <!-- *Link al perro -->
+                        <button type="button" class="btn btn-primary">Not Exit</button> 
+                    </a>   
+                </div>
+                </div>
+            </div>
+        </div>
+<!-- TODO: Fin modal "Conócelos" -->
+<!-- TODO: Inicio modal Login -->
+    	<!-- *Contenido MOdal (Login) -->
+        <div class="modal fade" id="modalLogin" tabindex="-1" aria-labelledby="modalLogin" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="modalLogin">Iniciar sesión</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="margen" class="row g-3">
+                        <div class="col-12">
+                            <label for="inputEmail" class="form-label">Correo Electrónico</label>
+                            <input type="text" class="form-control" id="inputEmail" placeholder="example@gmail.com">
+                        </div>
+
+                        <div class="col-md-12">
+                            <label for="inputPassword" class="form-label">Contraseña</label>
+                            <input type="password" class="form-control" id="inputPassword">
+                        </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                    <a href="">
+                        <button type="button" class="btn btn-primary">Registrarme</button>
+                    </a>
+                    <button type="button" class="btn btn-success">Ingresar</button>
+                    
+                </div>
+                </div>
+            </div>
+        </div>
+<!-- TODO: Fin modal Login -->
+
 
     </main>
     <hr>
