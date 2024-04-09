@@ -6,9 +6,28 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/Style.css">
+
+    <style>
+        .background-image {
+            background-image: url("img/Imagen\ _de_fondo.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 100vh; 
+            overflow-x: hidden;
+            position: relative; 
+            z-index: -1; 
+        }
+
+        .content {
+            position: relative; 
+            z-index: 1; 
+        }
+    </style>  
+
 </head>
-<body>
-    <header>
+<body class="background-image">
+    <header class="content">
 <!-- TODO: Inicio NavBar -->
         <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
             <div class="container-fluid justify-content-end">
@@ -57,13 +76,13 @@
             <div class="card mb-3" style="max-width: 540px;">
                 <div class="row g-0">
                     <div class="col-md-4">
-                    <img src="img/Comida_de_Mascota.png" class="img-fluid rounded-start" alt="100">
+                    <img src="img/Productos/Alimentacion/Bitaminas Mascota.png" class="img-fluid rounded-start" alt="100">
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">
-                            <h5 class="card-title">Producto 1</h5>
+                            <h5 class="card-title">Vitaminas</h5>
                             <p class="card-text">Esta es una descripción básica del producto.</p>
-                            <p class="card-text"><small class="text-body">$999.999</small></p>
+                            <p class="card-text"><small class="text-body">$10.000</small></p>
                         </div>
                     </div>
                 </div>
@@ -75,13 +94,13 @@
             <div class="card mb-3" style="max-width: 540px;">
                 <div class="row g-0">
                     <div class="col-md-4">
-                    <img src="img/Comida_de_Mascota.png" class="img-fluid rounded-start" alt="100">
+                    <img src="img/Productos/Alimentacion/Comida de Mascota.png" class="img-fluid rounded-start" alt="100">
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">
-                            <h5 class="card-title">Producto 2</h5>
+                            <h5 class="card-title">Saco comida</h5>
                             <p class="card-text">Esta es una descripción básica del producto.</p>
-                            <p class="card-text"><small class="text-body">$999.999</small></p>
+                            <p class="card-text"><small class="text-body">$50.000</small></p>
                         </div>
                     </div>
                 </div>
@@ -93,13 +112,13 @@
             <div class="card mb-3" style="max-width: 540px;">
                 <div class="row g-0">
                     <div class="col-md-4">
-                    <img src="img/Comida_de_Mascota.png" class="img-fluid rounded-start" alt="100">
+                    <img src="img/Productos/Alimentacion/Snack mascota.png" class="img-fluid rounded-start" alt="100">
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">
-                            <h5 class="card-title">Producto 3</h5>
+                            <h5 class="card-title">Snack</h5>
                             <p class="card-text">Esta es una descripción básica del producto.</p>
-                            <p class="card-text"><small class="text-body">$999.999</small></p>
+                            <p class="card-text"><small class="text-body">$5.000</small></p>
                         </div>
                     </div>
                 </div>
