@@ -15,9 +15,14 @@ h5 {
     text-align: center;
 }
 
+.nav-link {
+    color:lightgrey;
+    font-size: 35px;
+}
+
 .nav-link.nav-link.dropdown-toggle {
     color:lightgrey;
-    font-size: 30px;
+    font-size: 35px;
 }
 main{
     background-image: url("");
@@ -70,4 +75,20 @@ main{
 
 #margenB{
     margin-bottom: 20px;
+}
+
+.img_background{
+    background-image: url("../img/Imagen\ _de_fondo.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh; 
+    overflow-x: hidden;
+    position: relative; 
+    z-index: -1; 
+}
+
+.content {
+    position: relative; 
+    z-index: 1; 
 }
