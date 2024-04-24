@@ -47,9 +47,11 @@
                 </div>
             </div>
             <!-- *Botón del Modal (Login) -->
-        <button id="margen" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalLogin">
-            Login
-        </button>
+            <button id="margen" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalLogin">
+                Login
+            </button>
+            <!--*Botón OffCanva Carrito  -->
+            <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">Carrito </button>
         </nav>
 <!-- TODO: Fin NavBar -->
     </header>
@@ -240,6 +242,17 @@
         </div>
 <!-- TODO: Fin modal Login -->
 
+<!-- TODO: Inicio OffCanva carrito -->
+        <div class="offcanvas offcanvas-end text-bg-dark" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Esto es un carrito de compras</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <p>Si no ves un carrito de compras, debes depositar $5.000 a mi cuenta rut plz.</p>
+            </div>
+        </div>
+<!-- TODO: FIn OffCanva carrito -->
 
     </main>
     <hr>

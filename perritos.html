@@ -67,7 +67,9 @@
                         <p>Es un perro rescatado muy juguetón.
                             Está castrado y con sus vacunas al día.
                         </p>
-                        <a href="#" class="btn btn-primary">¡Conócelo!</a>
+                        <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#modalPerro1">
+                            ¡Conócelo!
+                        </button>
                     </div>
                 </div>
             </div>
@@ -176,6 +178,34 @@
             </div>
         </div>
 <!-- TODO: Fin modal Login -->
+<!-- TODO: Inicio Modal Perritos -->
+        <!-- *Modal perro 1 -->
+        <div class="modal fade" id="modalPerro1" tabindex="-1" aria-labelledby="modalPero1" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="modalPerro1">Eustaquio</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="img/Mascotas/Perros/AlgodonAzucar.png" alt="100" height="300" width="470">
+                    <p id="modalText">
+                        Eustaquio es definitivamente un gato. <br>
+                        pero le gusta la comida de perro <br>
+                        y hacer cosas de perro. <br> <br>
+                        Rara vez maulla.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Salir</button>
+                    <a href=""> <!-- *Link al perro -->
+                        <button type="button" class="btn btn-primary">Not Exit</button> 
+                    </a>
+                </div>
+                </div>
+            </div>
+        </div>
+<!-- TODO: Fin Modal Perritos -->
     </main>
     <footer>
         <nav class="navbar sticky-bottom bg-body-tertiary">
