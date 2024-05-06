@@ -49,39 +49,39 @@
     </header>
     <main>
         <br>
-        <form id="margen" class="row g-3">
-            <div class="col-md-6">
-                <label for="inputFirstName" class="form-label" >Nombre</label>
-                <input type="text" class="form-control" id="inputFirstName">
+        <form id="formularioReg" class="row g-3">
+            <div class="col-md-6"> <!-- *nombre -->
+                <label for="nombre" class="form-label" >Nombre</label>
+                <input type="text" class="form-control" id="nombre">
             </div>
-            <div class="col-md-6">
-                <label for="inputLastName" class="form-label">Apellidos</label>
-                <input type="text" class="form-control" id="inputLastName">
+            <div class="col-md-6"> <!-- **ape -->
+                <label for="ape" class="form-label">Apellidos</label>
+                <input type="text" class="form-control" id="ape">
             </div>
-            <div class="col-12">
-                <label for="inputEmail" class="form-label">Correo Electrónico</label>
-                <input type="text" class="form-control" id="inputEmail" placeholder="example@gmail.com">
+            <div class="col-12"> <!-- **email -->
+                <label for="email" class="form-label">Correo Electrónico</label>
+                <input type="text" class="form-control" id="email" placeholder="example@gmail.com">
             </div>
-            <div class="col-md-6">
-                <label for="inputPassword" class="form-label">Contraseña</label>
-                <input type="password" class="form-control" id="inputPassword">
+            <div class="col-md-6"> <!-- **pas1 -->
+                <label for="pass1" class="form-label">Contraseña</label>
+                <input type="password" class="form-control" id="pass1">
             </div>
-            <div class="col-md-6">
-                <label for="inputPassword1" class="form-label">Confirmar Contraseña</label>
-                <input type="password" class="form-control" id="inputPassword1">
+            <div class="col-md-6"> <!-- **pass2 -->
+                <label for="pass2" class="form-label">Confirmar Contraseña</label>
+                <input type="password" class="form-control" id="pass2">
             </div>
             
-            <div class="col-12">
-                <label for="inputAddress" class="form-label">Dirección</label>
-                <input type="text" class="form-control" id="inputAddress" placeholder=  "Example #0001">
+            <div class="col-12"> <!-- **direccion -->
+                <label for="direccion" class="form-label">Dirección</label>
+                <input type="text" class="form-control" id="direccion" placeholder=  "Example #0001">
             </div>
-            <div class="col-md-6">
-                <label for="inputCity" class="form-label">Ciudad</label>
-                <input type="text" class="form-control" id="inputCity" placeholder="Santiago">
+            <div class="col-md-6"> <!-- **ciudad -->
+                <label for="ciudad" class="form-label">Ciudad</label>
+                <input type="text" class="form-control" id="ciudad" placeholder="Santiago">
             </div>
-            <div class="col-md-4">
-                <label for="inputState" class="form-label">Región</label>
-                <select id="inputState" class="form-select">
+            <div class="col-md-4"> <!-- **region -->
+                <label for="region" class="form-label">Región</label>
+                <select id="region" class="form-select">
                 <option selected>Elegir...</option>
                 <option>Región de Arica y Parinacota</option>
                 <option>Región de Tarapacá</option>
@@ -101,20 +101,12 @@
                 <option>Región de Magallanes</option>
                 </select>
             </div>
-            <div class="col-md-2">
-                <label for="inputZip" class="form-label">Código postal</label>
-                <input type="text" class="form-control" id="inputZip" placeholder="0000000">
+            <div class="col-md-2"> <!-- **zip -->
+                <label for="zip" class="form-label">Código postal</label>
+                <input type="text" class="form-control" id="zip" placeholder="0000000">
             </div>
-            <div class="col-12">
-                <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="gridCheck">
-                <label class="form-check-label" for="gridCheck">
-                    Recuérdame
-                </label>
-                </div>
-            </div>
-            <div class="col-12">
-                <button  class="btn btn-success" type="submit">Regístrame</button>
+            <div class="col-12"> <!-- **btnReg -->
+                <button type="submit" class="btn btn-outline-dark" onclick="return validarFormulario()">Enviar</button>
             </div>
         </form>
         <br>
@@ -131,5 +123,8 @@
         </nav>
     </footer>
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>        
+    <script src="js/funcion.js">
+    </script>
 </body>
 </html>
