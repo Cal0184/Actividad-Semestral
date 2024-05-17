@@ -10,41 +10,34 @@
 <body>
     <header>
 <!-- TODO: Inicio NavBar -->
-        <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
-            <div class="container-fluid justify-content-end">
-                <a class="navbar-brand" href="principal.html"><img src="img/Logo_pagina.png" alt="100 " height="100"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="principal.html">
-                            Inicio
-                        </a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Mascotas
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="perritos.html">Perritos</a></li>
-                            <li><a class="dropdown-item" href="gatitos.html">Gatitos</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Productos
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="alimentacion.html">Alimentación</a></li>
-                            <li><a class="dropdown-item" href="accesorios.html">Accesorios</a></li>
-                            <li><a class="dropdown-item" href="higiene.html">Higiene</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                </div>
-            </div>
+<nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+    <div class="container-fluid justify-content-center">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <a href="principal.html"><img src="img/Logo_pagina.png" alt="100" height="100"></a>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+            <ul class="nav-item">
+                <a class="nav-link active" aria-current="page" href="principal.html">Principal</a>
+            </ul>
+            <ul>
+                ||
+            </ul>
+            <ul class="nav-item">
+                <a class="nav-link active" href="mascotas.html">Mascotas</a>
+            </ul>
+            <ul>
+                ||
+            </ul>
+            <ul class="nav-item">
+                <a class="nav-link active" href="#">Accesorios</a>
+            </ul>
+        </div>
+        <button id="margen" type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#modalLogin">
+            Login
+        </button>
+    </div>
+</nav>
 <!-- TODO: Fin NavBar -->
     </header>
     <main>
@@ -75,31 +68,26 @@
                 <label for="direccion" class="form-label">Dirección</label>
                 <input type="text" class="form-control" id="direccion" placeholder=  "Example #0001">
             </div>
-            <div class="col-md-6"> <!-- **ciudad -->
-                <label for="ciudad" class="form-label">Ciudad</label>
-                <input type="text" class="form-control" id="ciudad" placeholder="Santiago">
-            </div>
-            <div class="col-md-4"> <!-- **region -->
-                <label for="region" class="form-label">Región</label>
-                <select id="region" class="form-select">
-                <option value="0" selected>Elegir...</option>
-                <option value="1">Región de Arica y Parinacota</option>
-                <option value="2">Región de Tarapacá</option>
-                <option value="3">Región de Antofagasta</option>
-                <option value="4">Región de Atacama</option>
-                <option value="5">Región de Coquimbo</option>
-                <option value="6">Región de Valparaiso</option>
-                <option value="7">Región Metropolitana</option>
-                <option value="8">Región de O'Higgins</option>
-                <option value="9">Región del Maule</option>
-                <option value="10">Región del Ñuble</option>
-                <option value="11">Región del Biobio</option>
-                <option value="12">Región de La Araucanía</option>
-                <option value="13">Región de Los Ríos</option>
-                <option value="14">Región de Los Lagos</option>
-                <option value="15">Región de Aysén</option>
-                <option value="16">Región de Magallanes</option>
-                </select>
+            <div class="col-12">
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="region">Región:</label>
+                            <select id="region" name="Region" class="form-control" required onchange="obtenerComunas()">
+                                <option value="">Seleccione una Región</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="comuna">Comuna:</label>
+                            <select id="comuna" name="comuna" class="form-control" required>
+                                <option value="">Seleccione una Comuna</option>
+                            </select>
+                            <span id="comuna-error" class="error-message"></span>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="col-md-2"> <!-- **zip -->
                 <label for="zip" class="form-label">Código postal</label>
@@ -126,5 +114,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>        
     <script src="js/funcion.js">
     </script>
+    <script src="js/api.js"></script>
 </body>
 </html>
