@@ -20,10 +20,6 @@ h5 {
     font-size: 35px;
 }
 
-.nav-link.nav-link.dropdown-toggle {
-    color:lightgrey;
-    font-size: 35px;
-}
 main{
     background-image: url("");
     background-size: cover ;
@@ -35,14 +31,8 @@ main{
 }
 
 #margen{
-    margin: 20px;
+    margin: 50px;
 }
-
-.checkbox-xl .form-check-input {
-    top: 1.2rem;
-    scale: 1.7;
-    margin-right: 0.8rem;
-    }
 
 #chackLabel{
     font-size: 25px;
@@ -64,14 +54,6 @@ main{
     padding-top: 50px;
     font-size: 200%;
 }
-#imgCenter{ /* Pedigree */
-    margin: 35px;
-    margin-left: 90px;
-}
-
-#imgCenter1{ /* Pedigree */
-    margin-left: 375px;
-}
 
 #margenB{
     margin-bottom: 20px;
@@ -91,4 +73,8 @@ main{
 .content {
     position: relative; 
     z-index: 1; 
+}
+
+#margenC{
+    margin-left: 100px;
 }
