@@ -9,6 +9,10 @@
 
 h1 {
     text-align: center;
+    background-color: yellow;
+    font-size: 50px;
+    font-weight: bolder;
+    color: red;
 }
 
 h5 {
@@ -77,4 +81,8 @@ main{
 
 #margenC{
     margin-left: 100px;
+}
+
+#margenD{
+    margin-left: 5px;
 }

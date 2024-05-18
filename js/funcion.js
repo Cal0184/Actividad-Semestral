@@ -7,9 +7,11 @@ document.getElementById('formularioReg').addEventListener('submit', function(eve
     var pass1 = document.getElementById('pass1').value;
     var pass2 = document.getElementById('pass2').value;
     var direccion = document.getElementById('direccion').value;
+    var region = document.getElementById('region').value;
     var zip = document.getElementById('zip').velue;
     
-    if (nombre === "" || ape === "" || email === "" || pass1 === "" || pass2 === "" || direccion === "" || zip === ""){
+    
+    if (nombre === "" || ape === "" || email === "" || pass1 === "" || pass2 === "" || direccion === "" || zip === "" || region === "0"){
         alert("Por favor, completa todos los campos.");
     }else if (!validateEmail(email)){
         alert("Por favor, ingresa un correo con formato válido.");
@@ -17,8 +19,12 @@ document.getElementById('formularioReg').addEventListener('submit', function(eve
         alert("Las contraseñas no coinciden.");
     }else if (!validatePass(pass1)){
         alert("La contraseña debe tener al menos 8 caracteres, incluyendo letras, números y al menos un carácter especial.");
+    } else if (region === "0"){
+        alert("Debe seleccionar una región.");
+    } else if (!validateZip){
+        alert("El formato del Código postal no coincide.")
     }else {
-        console.log('Nombre:', nombre, 'Apellidos:', ape, 'Email:', email, 'Contraseña:', pass1, 'Dirección:', direccion, 'Zip:', zip);
+        console.log('Nombre:', nombre, 'Apellidos:', ape, 'Email:', email, 'Contraseña:', pass1, 'Dirección:', direccion, 'Zip:', zip, 'Region:',region);
     }
 });
 
@@ -32,3 +38,7 @@ function validatePass(pass1) {
     return regex.test(pass1);
 }
 
+function validateZip(zip) {
+    var regex = /^\d{8}$/;
+    return regex.test(zip);
+}
