@@ -63,11 +63,15 @@ main{
     margin-bottom: 20px;
 }
 
-body {
-    background-image: url("../img/img_fondo");
+.img_background{
+    background-image: url("../static/img/img_fondo.png");
     background-size: cover;
-    background-repeat: no-repeat;
     background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh; 
+    overflow-x: hidden;
+    position: relative; 
+    z-index: -1; 
 }
 
 .content {
