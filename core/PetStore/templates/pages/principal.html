@@ -17,6 +17,29 @@
             <h1>APROVECHA</h1>
         </div>
         <br>
+{% comment %} TODO: carrusel {% endcomment %}
+        <div id="carouselExampleAutoplaying" class="carousel slide w-50 mx-auto" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                <img src="{% static "img/Rebaja_Cortador.jpg" %}%}" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                <img src="{% static "img/rebaja_caja" %}%}" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                <img src="img/Rebaja_Cortador.jpg" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+{% comment %} TODO: carrusel {% endcomment %}
     </main>
     <script src="{% static 'js/funcion.js' %}"></script>
     <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
