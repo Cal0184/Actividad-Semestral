@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <title>Mascotas</title>
+</head>
+    <body class="img_background">
+        {% include 'base/header.html' %}
+        <br>
+{% comment %} *selector {% endcomment %}
+        <div class="container">
+            <select class="form-select" id="viewSelector" aria-label="Default select example">
+                <option selected>Filtrar por tipo</option>
+                <option value="{% url "mascotas" %}">Todos</option>
+                <option value="{% url "perros" %}">Perros</option>
+            </select>
+        </div>
+        <br>
+    {% comment %} TODO: cartas animales {% endcomment %}
+        <div  class="row row-cols-1 row-cols-md-3 g-10">
+            <div id="margenB" class="col container-fluid">
+                <div class="card h-100">
+                    <img src="../static/img/Mascotas/Perros/AlgodonAzucar.png" class="card-img-top" alt="100" height="350">
+                    <div class="card-body">
+                        <h5 class="card-title">Algodón de Azúcar</h5> <!-- *Nombre del perro -->
+                        <li>Raza: Dachshund</li>
+                        <hr>
+                        <p>Algodón de Azúcar, el Salchicha, es valiente, curioso y cariñoso, un compañero leal y juguetón,
+                            perfecto para aquellos que buscan valentía y afecto en un perro.
+                        </p> <br>
+                        <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#modalPerro1">
+                            ¡Conócelo!
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="margenB" class="col container-fluid">
+                <div class="card h-100">
+                    <img src="../static/img/Mascotas/Gatos/Eustaquio.jpg" class="card-img-top" alt="100" height="350">
+                    <div class="card-body">
+                        <h5 class="card-title">Eustaquio</h5> <!-- *Nombre del perro -->
+                        <li>Raza: Naranjo-Atigrado</li>
+                        <hr>
+                        <p>
+                            Eustaquio es un gatito naranjo encantador y juguetón, siempre explorando con curiosidad su entorno.
+                            Aunque travieso y activo, es cariñoso y adora los mimos de su familia humana.
+                        </p> <br>
+                        <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#modalGato1">
+                            ¡Conócelo!
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="margenB" class="col container-fluid">
+                <div class="card h-100">
+                    <img src="../static/img/Mascotas/Perros/Francho.png" class="card-img-top" alt="100" height="350">
+                    <div class="card-body">
+                        <h5 class="card-title">Francho</h5> <!-- *Nombre del perro -->
+                        <li>Raza: Beagle</li>
+                        <hr>
+                        <p>
+                            Francho es un Beagle cariñoso y enérgico, ideal para familias activas. Se lleva bien con todos,
+                            humanos y perros, gracias a su naturaleza juguetona y amigable.
+                        </p> <br>
+                        <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#modalPerro2">
+                            ¡Conócelo!
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="margenB" class="col container-fluid">
+                <div class="card h-100">
+                    <img src="../static/img/Mascotas/Gatos/Whiskers.jpg" class="card-img-top" alt="100" height="350">
+                    <div class="card-body">
+                        <h5 class="card-title">Whiskers</h5> <!-- *Nombre del perro -->
+                        <li>Raza: Persa</li>
+                        <hr>
+                        <p>
+                            Whiskers es un gato Persa majestuoso y tranquilo, conocido por su elegancia y afectuosidad.
+                            Disfruta de largas siestas al sol y momentos de juego curiosos. Con su carácter sereno y amoroso.
+                        </p><br>
+                        <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#modalGato2">
+                            ¡Conócelo!
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="margenB" class="col container-fluid">
+                <div class="card h-100">
+                    <img src="../static/img/Mascotas/Perros/Kintaro.png" class="card-img-top" alt="100" height="350">
+                    <div class="card-body">
+                        <h5 class="card-title">Kintaro</h5> <!-- *Nombre del perro -->
+                        <li>Raza: Shiba Inu</li>
+                        <hr>
+                        <p>Kintaro, la Shiba Inu, es leal, independiente e inteligente. Aunque reservada al principio,
+                            una vez que confía, su lealtad es inquebrantable. Disfruta de desafíos mentales y momentos
+                            de juego con su familia
+                        </p>
+                        <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#modalPerro3">
+                            ¡Conócelo!
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="margenB" class="col container-fluid">
+                <div class="card h-100">
+                    <img src="../static/img/Mascotas/Gatos/Luna.jpg" class="card-img-top" alt="100" height="350">
+                    <div class="card-body">
+                        <h5 class="card-title">Luna</h5> <!-- *Nombre del perro -->
+                        <li>Raza: Gris-Atigrado</li>
+                        <hr>
+                        <p>
+                            Luna es una gata gris elegante y misteriosa, con un encanto natural. Tranquila y observadora,
+                            disfruta de momentos de juego delicados y de la compañía de su familia. Una vez que establece
+                            un vínculo, es cariñosa y leal.
+                        </p>
+                        <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#modalGato3">
+                            ¡Conócelo!
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="margenB" class="col container-fluid">
+                <div class="card h-100">
+                    <img src="../static/img/Mascotas/Perros/Oscar.png" class="card-img-top" alt="100" height="350">
+                    <div class="card-body">
+                        <h5 class="card-title">Oscar</h5> <!-- *Nombre del perro -->
+                        <li>Raza: Pug</li>
+                        <hr>
+                        <p>Oscar, el Pug, es cariñoso, juguetón y leal, perfecto para la familia. Se lleva bien con todos
+                            y disfruta de actividades familiares. Ideal para aquellos que buscan un perro amigable y divertido.
+                        </p><br>
+                        <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#modalPerro4">
+                            ¡Conócelo!
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="margenB" class="col container-fluid">
+                <div class="card h-100">
+                    <img src="../static/img/Mascotas/Gatos/Nala.jpeg" class="card-img-top" alt="100" height="350">
+                    <div class="card-body">
+                        <h5 class="card-title">Nala</h5> <!-- *Nombre del perro -->
+                        <li>Raza: Gato-Europeo</li>
+                        <hr>
+                        <p>
+                            Nala es una gata Europea juguetona y cariñosa, con un pelaje suave y una mirada penetrante.
+                            Aunque puede ser independiente, demuestra un profundo afecto hacia su familia humana.
+                            Con su encanto y afecto, es la compañera perfecta.
+                        </p><br>
+                        <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#modalGato4">
+                            ¡Conócelo!
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="margenB" class="col container-fluid">
+                <div class="card h-100">
+                    <img src="../static/img/Mascotas/Perros/Presto.png" class="card-img-top" alt="100" height="350">
+                    <div class="card-body">
+                        <h5 class="card-title">Zatanna</h5> <!-- *Nombre del perro -->
+                        <li>Raza: Jack Russell Terrier</li>
+                        <hr>
+                        <p>Zatanna, la Jack Russell Terrier, es una compañera enérgica, valiente e inteligente, ideal para aventuras.
+                            Su amigable naturaleza la hace perfecta para aquellos que buscan un perro activo y leal.
+                        </p><br>
+                        <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#modalPerro5">
+                            ¡Conócelo!
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="margenB" class="col container-fluid">
+                <div class="card h-100">
+                    <img src="../static/img/Mascotas/Gatos/Oliver.jpg" class="card-img-top" alt="100" height="350">
+                    <div class="card-body">
+                        <h5 class="card-title">Oliver</h5> <!-- *Nombre del perro -->
+                        <li>Raza: Maine Coon</li>
+                        <hr>
+                        <p>
+                            Oliver es un Maine Coon afectuoso y leal, perfecto para quienes buscan la compañía
+                            de un gato cariñoso y magnífico.
+                        </p><br><br><br>
+                        <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#modalGato5">
+                            ¡Conócelo!
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="margenB" class="col container-fluid">
+                <div class="card h-100">
+                    <img src="../static/img/Mascotas/Perros/Rocki.png" class="card-img-top" alt="100" height="350">
+                    <div class="card-body">
+                        <h5 class="card-title">Rockie</h5> <!-- *Nombre del perro -->
+                        <li>Raza: Boxer</li>
+                        <hr>
+                        <p>
+                            Rockie, el Boxer, es enérgico y cariñoso, siempre listo para jugar y disfrutar al aire libre. Su lealtad
+                            inquebrantable hacia la familia y su naturaleza amigable lo hacen llevarse bien con todos. Es un compañero
+                            atlético y afectuoso, perfecto para quienes buscan un perro activo y amoroso.
+                        </p>
+                        <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#modalPerro6">
+                            ¡Conócelo!
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="margenB" class="col container-fluid">
+                <div class="card h-100">
+                    <img src="../static/img/Mascotas/Gatos/Sebastian.png" class="card-img-top" alt="100" height="350">
+                    <div class="card-body">
+                        <h5 class="card-title">Sebastian</h5> <!-- *Nombre del perro -->
+                        <li>Raza: Birmano</li>
+                        <hr>
+                        <p>
+                            Sebastian es un gato Birmano elegante y cariñoso. Disfruta de la tranquilidad junto a su
+                            familia y muestra un profundo afecto una vez que se establece un vínculo de confianza. Es el compañero ideal
+                            para quienes buscan la compañía de un gato refinado y afectuoso.
+                        </p>
+                        <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#modalGato6">
+                            ¡Conócelo!
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% include 'base/modalMascotas.html' %}
+
+        
+        {% include 'base/footer.html' %}
+        <script src="{% static 'js/funcion.js' %}"></script>
+        <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    </body>
+</html>

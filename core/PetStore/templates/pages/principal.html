@@ -14,7 +14,7 @@
     <main>
         <br>
         <br><div class="row row-cols-md-4 justify-content-center">
-            <h1>APROVECHA</h1>
+            <h1 id="oferta">APROVECHA</h1>
         </div>
         <br>
 {% comment %} TODO: carrusel {% endcomment %}
@@ -40,7 +40,134 @@
             </button>
         </div>
 {% comment %} TODO: carrusel {% endcomment %}
+
+{% comment %} TODO: carta animales {% endcomment %}
+        <div id="margen" class="row row-cols-1 row-cols-md-3 g-10">
+            <div class="col container-fluid">
+                <div class="card h-100">
+                    <img src="../static/img/Mascotas/Gatos/Eustaquio.jpg" class="card-img-top" alt="100" height="350">
+                    <div class="card-body">
+                        <h5 class="card-title">Eustaquio</h5>
+                        <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#modalGato1">
+                            ¡Conócelo!
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col container-fluid">
+                <div class="card h-100">
+                    <img src="../static/img/Mascotas/Perros/Rocki.png" class="card-img-top" alt="100" height="350">
+                    <div class="card-body">
+                        <h5 class="card-title">Rocki</h5>
+                        <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#modalPerro1">
+                            ¡Conócelo!
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col container-fluid">
+                <div class="card h-100">
+                    <img src="../static/img/Mascotas/Gatos/Whiskers.jpg" class="card-img-top" alt="100" height="350">
+                    <div class="card-body">
+                        <h5 class="card-title">Whiskers</h5>
+                        <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#modalGato2">
+                            ¡Conócelo!
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+{% comment %} TODO: carta animales {% endcomment %}
+
+{% comment %} TODO: modal cartas {% endcomment %}
+        <!-- *Modal Gato 1 -->
+        <div class="modal fade" id="modalGato1" tabindex="-1" aria-labelledby="modalGato1" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="modalGato1">Eustaquio</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="../static/img/Mascotas/Gatos/Eustaquio.jpg" alt="100" height="300" width="470">
+                    <p id="modalText">
+                        Eustaquio es definitivamente un gato. <br>
+                        pero le gusta la comida de perro <br>
+                        y hacer cosas de perro. <br> <br>
+                        Rara vez maulla.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Salir</button>
+                    <a href=""> <!-- *Link al perro -->
+                        <button type="button" class="btn btn-primary">Not Exit</button> 
+                    </a>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- *Modal Perro 1 -->
+        <div class="modal fade" id="modalPerro1" tabindex="-1" aria-labelledby="modalPerro1" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="modalPerro1">Rockie</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="../static/img/Mascotas/Perros/Rocki.png" alt="100" height="300" width="470">
+                    <p id="modalText">
+                        Rockie era un perro de pelaje negro  <br>
+                        y brillante, con ojos que reflejaban <br>
+                        una mezcla de curiosidad y lealtad <br>
+                        inquebrantable.
+
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Salir</button>
+                    <a href=""> <!-- *Link al perro -->
+                        <button type="button" class="btn btn-primary">Not Exit</button> 
+                    </a>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- *Modal Gato 2 -->
+        <div class="modal fade" id="modalGato2" tabindex="-1" aria-labelledby="modalGato2" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="modalGato2">Whiskers</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="../static/img/Mascotas/Gatos/Whiskers.jpg" alt="100" height="300" width="470">
+                    <p id="modalText">
+                        Whiskers era un gato de pelaje <br>
+                        blanco como la nieve <br>
+                        y un par de brillantes <br>
+                        ojos oscuros que parecían contemplar el <br>
+                        abismo <br>
+
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Salir</button>
+                    <a href=""> <!-- *Link al perro -->
+                        <button type="button" class="btn btn-primary">Not Exit</button> 
+                    </a>   
+                </div>
+                </div>
+            </div>
+        </div>
+{% comment %} TODO: modal cartas {% endcomment %}
     </main>
+    {% include 'base/footer.html' %}
     <script src="{% static 'js/funcion.js' %}"></script>
     <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
 </body>

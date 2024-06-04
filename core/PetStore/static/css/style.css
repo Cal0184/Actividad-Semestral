@@ -7,7 +7,7 @@
     color: #ffffff
 }
 
-h1 {
+#oferta {
     text-align: center;
     background-color: yellow;
     font-size: 50px;
@@ -64,7 +64,7 @@ main{
 }
 
 .img_background{
-    background-image: url("../static/img/img_fondo.png");
+    background-image: url("../img/img_fondo.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
