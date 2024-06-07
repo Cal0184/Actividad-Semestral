@@ -43,10 +43,15 @@ function validateZip(zip) {
     return regex.test(zip);
 }
 
+function cambiarMascotas(){
+    const selectElement = document.getElementById('viewSelector');
+        if (selectElement.value) {      
+            window.location.href = selectElement.value;
+        }
+}
 
 document.addEventListener('DOMContentLoaded', (event) => {
     const selectElement = document.getElementById('viewSelector');
-
     selectElement.addEventListener('change', (event) => {
         const selectedValue = event.target.value;
         if (selectedValue) {

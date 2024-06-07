@@ -11,4 +11,4 @@ def perros(request):
     return render (request, 'pages/perros.html')
 
 def gatos(request):
-    return render (request, 'page/gatos.html')
+    return render (request, 'pages/gatos.html')

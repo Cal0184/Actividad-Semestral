@@ -12,13 +12,14 @@
         {% include 'base/header.html' %}
         <br>
         <div class="container">
-            <select class="form-select" id="viewSelector" aria-label="Default select example">
+            <select class="form-select" id="viewSelector" aria-label="Default select example" onchange="cambiarMascotas()">
                 <option value="{% url "mascotas" %}">Todos</option>
                 <option value="{% url "perros" %}">Perros</option>
                 <option selected>Gatos</option>
             </select>
         </div>
         <br>
+        gato
     {% comment %} TODO: cartas animales {% endcomment %}
         
         {% include 'base/modalMascotas.html' %}
