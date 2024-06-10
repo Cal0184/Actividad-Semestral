@@ -24,3 +24,6 @@ def alimentos(request):
 
 def accesorios(request):
     return render(request, 'pages/accesorios.html')
+
+def registro(request):
+    return render(request, 'pages/registro.html')
