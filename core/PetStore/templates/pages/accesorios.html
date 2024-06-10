@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <title>Accesorios</title>
+</head>
+
+<body class="img_background">
+    {% include 'base/header.html' %}
+    <main>
+        <br>
+        <div class="container">
+            <select class="form-select" id="viewSelector1" aria-label="Default select example" onchange="cambiarProductos()">
+                <option selected>Filtrar por producto</option>
+                <option value="{% url "productos" %}">Todos</option>
+                <option value="{% url "accesorios" %}">Accesorios</option>
+                <option value="{% url "alimentos" %}">Alimentación</option>
+                <option value="{% url "higiene" %}">Higiene</option>
+            </select>
+        </div>
+        <br>
+{% comment %} todo: productos {% endcomment %}
+        accesorios
+{% comment %} todo: productos {% endcomment %}
+    </main>
+    {% include 'base/footer.html' %}
+        <script src="{% static 'js/funcion.js' %}"></script>
+        <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+</body>
+</html>
