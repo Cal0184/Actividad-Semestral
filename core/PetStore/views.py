@@ -8,7 +8,19 @@ def mascotas(request):
     return render(request, 'pages/mascotas.html')
 
 def perros(request):
-    return render (request, 'pages/perros.html')
+    return render(request, 'pages/perros.html')
 
 def gatos(request):
-    return render (request, 'pages/gatos.html')
+    return render(request, 'pages/gatos.html')
+
+def productos(request):
+    return render(request, 'pages/productos.html')
+
+def higiene(request):
+    return render(request, 'pages/higiene.html')
+
+def alimentos(request):
+    return render(request, 'pages/alimentos.html')
+
+def accesorios(request):
+    return render(request, 'pages/accesorios.html')

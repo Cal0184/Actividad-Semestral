@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <title>Alimentos</title>
+</head>
+
+<body class="img_background">
+    {% include 'base/header.html' %}
+    <main>
+        <br>
+        <div class="container">
+            <select class="form-select" id="viewSelector1" aria-label="Default select example" onchange="cambiarProductos()">
+                <option value="{% url "productos" %}">Todos</option>
+                <option value="{% url "accesorios" %}">Accesorios</option>
+                <option selected>Alimentación</option>
+                <option value="{% url "higiene" %}">Higiene</option>
+            </select>
+        </div>
+        <br>
+{% comment %} todo: productos {% endcomment %}
+        <div id="margenC" class="row row-cols-1 row-cols-md-2 g-4">
+            <!-- *Producto 1 -->
+            <div class="col">
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                        <img src="../static/img/Productos/Alimentacion/Comida de Mascota.jpg" class="img-fluid rounded-start" alt="100">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Comida Pedigree Adulto</h5>
+                                <p class="card-text">Esta es una descripción básica del producto.</p>
+                                <p class="card-text"><small class="text-body">$6.000</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- *Producto 2 -->
+            <div class="col">
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                        <img src="../static/img/Productos/Alimentacion/ComidaCachorro.jpg" class="img-fluid rounded-start" alt="100">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Comida Pedigree Cachorro</h5>
+                                <p class="card-text">Esta es una descripción básica del producto.</p>
+                                <p class="card-text"><small class="text-body">$30.000</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- *Producto 3 -->
+            <div class="col">
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                        <img src="../static/img/Productos/Alimentacion/ComidaMayor.jpg" class="img-fluid rounded-start" alt="100">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Comida Pedigree Viejito</h5>
+                                <p class="card-text">Esta es una descripción básica del producto.</p>
+                                <p class="card-text"><small class="text-body">$30.000</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+    
+            <!-- *Producto 4 -->
+            <div class="col">
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                        <img src="../static/img/Productos/Alimentacion/Snackmascota.jpg" class="img-fluid rounded-start" alt="100">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Snaks para mascotas</h5>
+                                <p class="card-text">Esta es una descripción básica del producto.</p>
+                                <p class="card-text"><small class="text-body">$15.000</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+    
+            <!-- *Producto 5 -->
+            <div class="col">
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                        <img src="../static/img/Productos/Alimentacion/Bitaminas Mascota.jpg" class="img-fluid rounded-start" alt="img">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Suplemento Vitamínico</h5>
+                                <p class="card-text">Esta es una descripción básica del producto.</p>
+                                <p class="card-text"><small class="text-body">$35.000</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            <div class="col">
+    
+                <!-- *Producto 6 -->
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                        <img src="../static/img/Productos/Alimentacion/ComidaPequeña.jpg" class="img-fluid rounded-start" alt="100">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Bolsa pequeña Pedigree Cachorro</h5>
+                                <p class="card-text">Esta es una descripción básica del producto.</p>
+                                <p class="card-text"><small class="text-body">$15.000</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+    
+            <!-- *Producto 7 -->
+            <div class="col">
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                        <img src="../static/img/Productos/Alimentacion/ComidaSobre.jpg" class="img-fluid rounded-start" alt="100">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Sobre Pedigree sabor Pollo</h5>
+                                <p class="card-text">Esta es una descripción básica del producto.</p>
+                                <p class="card-text"><small class="text-body">$2.500</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+    
+            <!-- *Producto 8 -->
+            <div class="col">
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                        <img src="../static/img/Productos/Alimentacion/Pedigree-cachorro-MAXIPET.jpg" class="img-fluid rounded-start" alt="100">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Comida especial Cachorro</h5>
+                                <p class="card-text">Esta es una descripción básica del producto.</p>
+                                <p class="card-text"><small class="text-body">$15.000</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+{% comment %} todo: productos {% endcomment %}
+    </main>
+    {% include 'base/footer.html' %}
+        <script src="{% static 'js/funcion.js' %}"></script>
+        <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+</body>
+</html>

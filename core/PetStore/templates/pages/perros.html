@@ -6,7 +6,7 @@
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
-    <title>Mascotas</title>
+    <title>Perros</title>
 </head>
     <body class="img_background">
         {% include 'base/header.html' %}
@@ -20,7 +20,110 @@
         </div>
         <br>
     {% comment %} TODO: cartas animales {% endcomment %}
-        perro
+        <!-- TODO: Inicio Cartas de animales -->
+        <div  class="row row-cols-1 row-cols-md-3 g-10">
+            <div id="margenB" class="col container-fluid">
+                <div class="card h-100">
+                    <img src="../static/img/Mascotas/Perros/AlgodonAzucar.png" class="card-img-top" alt="100" height="350">
+                    <div class="card-body">
+                        <h5 class="card-title">Algodón de Azúcar</h5> <!-- *Nombre del perro -->
+                        <li>Raza: Dachshund</li>
+                        <hr>
+                        <p>Algodón de Azúcar, el Salchicha, es valiente, curioso y cariñoso, un compañero leal y juguetón,
+                            perfecto para aquellos que buscan valentía y afecto en un perro.
+                        </p> <br>
+                        <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#modalPerro1">
+                            ¡Conócelo!
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div id="margenB" class="col container-fluid">
+                <div class="card h-100">
+                    <img src="../static/img/Mascotas/Perros/Francho.png" class="card-img-top" alt="100" height="350">
+                    <div class="card-body">
+                        <h5 class="card-title">Francho</h5> <!-- *Nombre del perro -->
+                        <li>Raza: Beagle</li>
+                        <hr>
+                        <p>
+                            Francho es un Beagle cariñoso y enérgico, ideal para familias activas. Se lleva bien con todos,
+                            humanos y perros, gracias a su naturaleza juguetona y amigable.
+                        </p> <br>
+                        <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#modalPerro2">
+                            ¡Conócelo!
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div id="margenB" class="col container-fluid">
+                <div class="card h-100">
+                    <img src="../static/img/Mascotas/Perros/Kintaro.png" class="card-img-top" alt="100" height="350">
+                    <div class="card-body">
+                        <h5 class="card-title">Kintaro</h5> <!-- *Nombre del perro -->
+                        <li>Raza: Shiba Inu</li>
+                        <hr>
+                        <p>Kintaro, la Shiba Inu, es leal, independiente e inteligente. Aunque reservada al principio,
+                            una vez que confía, su lealtad es inquebrantable. Disfruta de desafíos mentales y momentos
+                            de juego con su familia
+                        </p>
+                        <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#modalPerro3">
+                            ¡Conócelo!
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div id="margenB" class="col container-fluid">
+                <div class="card h-100">
+                    <img src="../static/img/Mascotas/Perros/Oscar.png" class="card-img-top" alt="100" height="350">
+                    <div class="card-body">
+                        <h5 class="card-title">Oscar</h5> <!-- *Nombre del perro -->
+                        <li>Raza: Pug</li>
+                        <hr>
+                        <p>Oscar, el Pug, es cariñoso, juguetón y leal, perfecto para la familia. Se lleva bien con todos
+                            y disfruta de actividades familiares. Ideal para aquellos que buscan un perro amigable y divertido.
+                        </p><br>
+                        <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#modalPerro4">
+                            ¡Conócelo!
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div id="margenB" class="col container-fluid">
+                <div class="card h-100">
+                    <img src="../static/img/Mascotas/Perros/Presto.png" class="card-img-top" alt="100" height="350">
+                    <div class="card-body">
+                        <h5 class="card-title">Zatanna</h5> <!-- *Nombre del perro -->
+                        <li>Raza: Jack Russell Terrier</li>
+                        <hr>
+                        <p>Zatanna, la Jack Russell Terrier, es una compañera enérgica, valiente e inteligente, ideal para aventuras.
+                            Su amigable naturaleza la hace perfecta para aquellos que buscan un perro activo y leal.
+                        </p><br>
+                        <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#modalPerro5">
+                            ¡Conócelo!
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div id="margenB" class="col container-fluid">
+                <div class="card h-100">
+                    <img src="../static/img/Mascotas/Perros/Rocki.png" class="card-img-top" alt="100" height="350">
+                    <div class="card-body">
+                        <h5 class="card-title">Rockie</h5> <!-- *Nombre del perro -->
+                        <li>Raza: Boxer</li>
+                        <hr>
+                        <p>
+                            Rockie, el Boxer, es enérgico y cariñoso, siempre listo para jugar y disfrutar al aire libre. Su lealtad
+                            inquebrantable hacia la familia y su naturaleza amigable lo hacen llevarse bien con todos. Es un compañero
+                            atlético y afectuoso, perfecto para quienes buscan un perro activo y amoroso.
+                        </p>
+                        <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#modalPerro6">
+                            ¡Conócelo!
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- TODO: Fin Cartas de animales -->           
 
         {% include 'base/modalMascotas.html' %}
 
