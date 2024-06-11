@@ -1,47 +1,73 @@
-document.getElementById('formularioReg').addEventListener('submit', function(event) {
+
+function validarFormulario(event) {
     event.preventDefault();
+    var formulario = document.getElementById('formRegistro');
+    var inputs = formulario.getElementsByTagName('input');
+    var select = formulario.getElementsByTagName('select')[0];
+    var valido = true;
 
-    var nombre = document.getElementById('nombre').value;
-    var ape = document.getElementById('ape').value;
-    var email = document.getElementById('email').value;
-    var pass1 = document.getElementById('pass1').value;
-    var pass2 = document.getElementById('pass2').value;
-    var direccion = document.getElementById('direccion').value;
-    var region = document.getElementById('region').value;
-    var zip = document.getElementById('zip').velue;
-    
-    
-    if (nombre === "" || ape === "" || email === "" || pass1 === "" || pass2 === "" || direccion === "" || zip === "" || region === "0"){
-        alert("Por favor, completa todos los campos.");
-    }else if (!validateEmail(email)){
-        alert("Por favor, ingresa un correo con formato válido.");
-    }else if (pass1!= pass2){
-        alert("Las contraseñas no coinciden.");
-    }else if (!validatePass(pass1)){
-        alert("La contraseña debe tener al menos 8 caracteres, incluyendo letras, números y al menos un carácter especial.");
-    } else if (region === "0"){
-        alert("Debe seleccionar una región.");
-    } else if (!validateZip){
-        alert("El formato del Código postal no coincide.")
-    }else {
-        console.log('Nombre:', nombre, 'Apellidos:', ape, 'Email:', email, 'Contraseña:', pass1, 'Dirección:', direccion, 'Zip:', zip, 'Region:',region);
+    // Limpiar mensajes de error previos
+    var mensajesError = document.getElementsByClassName('error-message');
+    while (mensajesError.length > 0) {
+        mensajesError[0].parentNode.removeChild(mensajesError[0]);
     }
-});
 
-function validateEmail(email) {
-    var regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return regex.test(email);
+    // Validar campos de texto
+    for (var i = 0; i < inputs.length; i++) {
+        if (inputs[i].type !== 'submit' && inputs[i].value.trim() === '') {
+            inputs[i].classList.add('error');
+            var mensaje = document.createElement('div');
+            mensaje.className = 'error-message';
+            mensaje.innerText = 'Este campo es obligatorio';
+            inputs[i].parentNode.insertBefore(mensaje, inputs[i].nextSibling);
+            valido = false;
+        } else {
+            inputs[i].classList.remove('error');
+        }
+    }
+
+    // Validar selección de región
+    if (select.value === '') {
+        select.classList.add('error');
+        var mensaje = document.createElement('div');
+        mensaje.className = 'error-message';
+        mensaje.innerText = 'Este campo es obligatorio';
+        select.parentNode.insertBefore(mensaje, select.nextSibling);
+        valido = false;
+    } else {
+        select.classList.remove('error');
+    }
+
+    // Validar que las contraseñas coincidan
+    var _pass = formulario.querySelector('input[name="_pass"]');
+    var confirmarPass = formulario.querySelector('input[name="confirmar_pass"]');
+    if (_pass.value !== confirmarPass.value) {
+        _pass.classList.add('error');
+        confirmarPass.classList.add('error');
+        var mensaje = document.createElement('div');
+        mensaje.className = 'error-message';
+        mensaje.innerText = 'Las contraseñas no coinciden';
+        confirmarPass.parentNode.insertBefore(mensaje, confirmarPass.nextSibling);
+        valido = false;
+    }
+
+    // Validar longitud de contraseña y número
+    if (_pass.value.length < 8 || !/\d/.test(_pass.value)) {
+        _pass.classList.add('error');
+        var mensaje = document.createElement('div');
+        mensaje.className = 'error-message';
+        mensaje.innerText = 'La contraseña debe tener al menos 8 caracteres y contener al menos un número';
+        _pass.parentNode.insertBefore(mensaje, _pass.nextSibling);
+        valido = false;
+    }
+
+    if (valido) {
+        formulario.submit();
+    }
 }
 
-function validatePass(pass1) {
-    var regex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
-    return regex.test(pass1);
-}
 
-function validateZip(zip) {
-    var regex = /^\d{8}$/;
-    return regex.test(zip);
-}
+
 
 function cambiarMascotas(){
     const selectElement = document.getElementById('viewSelector');

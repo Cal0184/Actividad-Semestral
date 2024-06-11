@@ -1,5 +1,5 @@
-from django.shortcuts import render
-
+from django.shortcuts import render, redirect
+from .forms import formsRegistro
 # Create your views here.
 def principal(request):
     return render(request, 'pages/principal.html')
@@ -27,3 +27,13 @@ def accesorios(request):
 
 def registro(request):
     return render(request, 'pages/registro.html')
+
+def formRegistro(request):
+    if request.method == 'POST':
+        form = formsRegistro(request.POST)
+        if form.is_valid():
+            # Procesar datos
+            return redirect('formRegistro')
+    
+    form = formsRegistro()   
+    return render(request, 'pages/formRegistro.html', {'form': form})
