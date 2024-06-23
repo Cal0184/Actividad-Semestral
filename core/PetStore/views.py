@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .forms import formsRegistro
+from .forms import FormUser
 # Create your views here.
 def principal(request):
     return render(request, 'pages/principal.html')
@@ -26,14 +26,13 @@ def accesorios(request):
     return render(request, 'pages/accesorios.html')
 
 def registro(request):
-    return render(request, 'pages/registro.html')
-
-def formRegistro(request):
     if request.method == 'POST':
-        form = formsRegistro(request.POST)
+        form = FormUser(request.POST)
         if form.is_valid():
-            # Procesar datos
-            return redirect('formRegistro')
-    
-    form = formsRegistro()   
-    return render(request, 'pages/formRegistro.html', {'form': form})
+            usuario = form.save(commit=False)
+            usuario.set_password(form.cleaned_data['pass1'])
+            usuario.save()
+            return redirect('principal')
+    else:
+        form = FormUser()
+    return render(request, 'pages/registro.html', {'form': form})

@@ -1,5 +1,4 @@
 from django.db import models
-from django.contrib.auth.models import User
 
 # Create your models here.
 class Region(models.Model):
@@ -15,7 +14,7 @@ class Usuario(models.Model):
     email = models.EmailField(unique=True, primary_key=True, db_column="email")
     pass1 = models.CharField(max_length=128, db_column="contrasena")
     direccion = models.CharField(max_length=255, db_column="direccion")
-    region = models.ForeignKey(Region, to_field='id_region', on_delete=models.SET_NULL, null=True, db_column="idRegion")
+    region = models.ForeignKey("Genero", on_delete=models.CASCADE, db_column="idGenero")
     codZip = models.CharField(max_length=20, db_column="codZip")
     
     def __str__(self):
