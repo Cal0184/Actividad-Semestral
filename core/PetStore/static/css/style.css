@@ -95,3 +95,10 @@ main{
     color: red;
     font-size: 12px;
 }
+
+#titulo {
+    background-color:rgb(43, 48, 53);
+    font-size: 50px;
+    font-weight: bold;
+    color: lightgray;
+}

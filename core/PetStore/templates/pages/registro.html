@@ -12,10 +12,52 @@
 <body class="img_background">
     {% include 'base/header.html' %}
     <main>
-        <div>
-            <div class="container">
-                
+        <br>
+        <div class="container">
+            <div class="row row-cols-md-4">
+                <h2>Registro de usuario</h2>
             </div>
+            <br>
+            <form method="POST">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="id_nombre">Nombre</label>
+                    {{ form.nombre }}
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="id_apellidos">Apellidos</label>
+                    {{ form.apellidos }}
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="id_email">Correo</label>
+                    {{ form.email }}
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="id_pass1">Constraseña</label>
+                    {{ form.pass1 }}
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="id_direccion">Dirección</label>
+                    {{ form.direccion }}
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="id_region">Región</label>
+                    {{ form.region }}
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="id_codZip">Código Postal</label>
+                    {{ form.codZip }}
+                </div>
+                <br>
+                <br>
+                <button type="submit" class="btn btn-dark">Registrarse</button>
+            </form>
         </div>
     </main>
     {% include 'base/footer.html' %}

@@ -1,5 +1,7 @@
 from django.shortcuts import render, redirect
+from .models import Usuario, Region
 from .forms import FormUser
+
 # Create your views here.
 def principal(request):
     return render(request, 'pages/principal.html')
@@ -30,9 +32,9 @@ def registro(request):
         form = FormUser(request.POST)
         if form.is_valid():
             usuario = form.save(commit=False)
-            usuario.set_password(form.cleaned_data['pass1'])
             usuario.save()
             return redirect('principal')
     else:
         form = FormUser()
     return render(request, 'pages/registro.html', {'form': form})
+
