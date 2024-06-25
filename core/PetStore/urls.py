@@ -11,4 +11,5 @@ urlpatterns = [
     path('accesorios', views.accesorios, name='accesorios'),
     path('alimentos', views.alimentos, name='alimentos'),
     path('registro', views.registro, name='registro'),
+    path("login",views.conectar,name="login")
     ]

@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from .models import Usuario, Region
 from .forms import FormUser
+from django.contrib.auth import authenticate,login,logout
 
 # Create your views here.
 def principal(request):
@@ -38,3 +39,17 @@ def registro(request):
         form = FormUser()
     return render(request, 'pages/registro.html', {'form': form})
 
+def conectar(request):
+    correo = request.POST["email"]
+    password = request.POST["pass1"]
+    user = authenticate(request,email=correo,password=password)
+    if user is not None:
+        login(request,user)
+        if(request.user.is_authenticated):
+            print("conectado")
+        else:
+            print("Fallo")
+        return render(request,"pages/principal.html")
+    else:
+        print("No funciona")
+        return render(request,"pages/principal.html")
