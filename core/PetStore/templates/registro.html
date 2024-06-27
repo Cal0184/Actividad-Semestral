@@ -13,7 +13,6 @@
     {% include 'base/header.html' %}
     <main>
         <br>
-{% comment %}
         <div class="container">
             <div class="row row-cols-md-4">
                 <h2>Registro de usuario</h2>
@@ -23,12 +22,12 @@
                 {% csrf_token %}
                 <div class="form-group">
                     <label for="id_nombre">Nombre</label>
-                    {{ form.nombre }}
+                    {{ form.username }}
                 </div>
                 <br>
                 <div class="form-group">
                     <label for="id_apellidos">Apellidos</label>
-                    {{ form.apellidos }}
+                    {{ form.last_name }}
                 </div>
                 <br>
                 <div class="form-group">
@@ -38,7 +37,7 @@
                 <br>
                 <div class="form-group">
                     <label for="id_pass1">Constraseña</label>
-                    {{ form.pass1 }}
+                    {{ form.password1 }}
                 </div>
                 <br>
                 <div class="form-group">
@@ -53,20 +52,13 @@
                 <br>
                 <div class="form-group">
                     <label for="id_codZip">Código Postal</label>
-                    {{ form.codZip }}
+                    {{ form.cod_zip }}
                 </div>
                 <br>
                 <br>
                 <button type="submit" class="btn btn-dark">Registrarse</button>
             </form>
         </div>
-{% endcomment %}
-        <form method="post">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <button type="submit">Registrar</button>
-        </form>
-        
     </main>
     {% include 'base/footer.html' %}
     <script src="{% static 'js/funcion.js' %}"></script>
