@@ -1,7 +1,8 @@
 from django.shortcuts import render, redirect
+from django.contrib.auth import login, logout, authenticate
+from .forms import RegistroUser, LoginUser
 from .models import Usuario, Region
-from .forms import FormUser
-from django.contrib.auth import authenticate,login,logout
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 def principal(request):
@@ -30,26 +31,32 @@ def accesorios(request):
 
 def registro(request):
     if request.method == 'POST':
-        form = FormUser(request.POST)
+        form = RegistroUser(request.POST)
         if form.is_valid():
-            usuario = form.save(commit=False)
-            usuario.save()
+            user = form.save()
+            login(request, user)
             return redirect('principal')
     else:
-        form = FormUser()
-    return render(request, 'pages/registro.html', {'form': form})
+        form = RegistroUser()
+    return render(request, 'registro.html', {'form': form})
 
 def conectar(request):
-    correo = request.POST["email"]
-    password = request.POST["pass1"]
-    user = authenticate(request,email=correo,password=password)
-    if user is not None:
-        login(request,user)
-        if(request.user.is_authenticated):
-            print("conectado")
-        else:
-            print("Fallo")
-        return render(request,"pages/principal.html")
+    if request.method == 'POST':
+        form = LoginUser(request, data=request.POST)
+        if form.is_valid():
+            email = form.cleaned_data.get('username')
+            password = form.cleaned_data.get('password')
+            user = authenticate(request, username=email, password=password)
+            if user is not None:
+                login(request, user)
+                return redirect('principal')
+            else:
+                form.add_error(None, 'Email o contraseña incorrectos.')
     else:
-        print("No funciona")
-        return render(request,"pages/principal.html")
+        form = LoginUser()
+    return render(request, 'login.html', {'form': form})
+
+@login_required
+def desconectar(request):
+    logout(request)
+    return redirect('principal')
