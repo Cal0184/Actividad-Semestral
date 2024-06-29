@@ -26,9 +26,16 @@
                     <a class="nav-link active" href="{% url "productos" %}">Productos</a>
                 </ul>
             </div>
-            <button id="margen" type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#modalLogin">
-                Iniciar Sesión
-            </button>
+            <div class="col-1">
+                <a href="{% url "login" %}">
+                    <img src="../static/img/login.png" alt="100" height="50">
+                </a>
+            </div>
+            <div class="">
+                <a href="https:www.youtube.com">
+                    <img src="../static/img/carrito.png" alt="100" height="50">
+                </a>
+            </div>
         </div>
     </nav>
 </header>

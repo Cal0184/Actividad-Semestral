@@ -2,10 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
     <title>Login</title>
 </head>
-<body>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus et minima distinctio blanditiis eligendi. Labore ex doloribus maxime dolores qui itaque tempora! Consequuntur, iste optio beatae deserunt molestiae natus vel.
+<body class="img_background">
+    {% include 'base/header.html' %}
+    <main>
+        <a href="{% url "principal" %}">
+            <br>
+            <br>
+            <button class="btn btn-light">
+                Principal
+            </button>
+        </a>
+    </main>
+    {% include 'base/footer.html' %}
+    <script src="{% static 'js/funcion.js' %}"></script>
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
 </body>
 </html>
