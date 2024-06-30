@@ -11,6 +11,29 @@
 <body class="img_background">
     {% include 'base/header.html' %}
     <main>
+        <br>
+        <div class="container">
+            <div class="row row-cols-md-4">
+                <h2>Iniciar Sesión</h2>
+            </div>
+            <br>
+            <form method="POST">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="id_username">Correo</label>
+                    {{ form.username }}
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="id_password">Contraseña</label>
+                    {{ form.password }}
+                </div>
+            </form>
+            <div>
+                <button type="submit" class="btn btn-primary">Iniciar sesión</button>
+            </div>
+        </div>
+
         <a href="{% url "principal" %}">
             <br>
             <br>
