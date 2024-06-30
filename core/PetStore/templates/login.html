@@ -28,17 +28,22 @@
                     <label for="id_password">Contraseña</label>
                     {{ form.password }}
                 </div>
+                <div class="container">
+                    <div class="col">
+                        <div class="row-6">
+                            <button type="submit" class="btn btn-primary">Iniciar sesión</button>
+                        </div>
+                    </div>
+                </div>
             </form>
-            <div>
-                <button type="submit" class="btn btn-primary">Iniciar sesión</button>
-            </div>
         </div>
+        
 
-        <a href="{% url "principal" %}">
+        <a href="{% url "registro" %}">
             <br>
             <br>
             <button class="btn btn-light">
-                Principal
+                Registrarse
             </button>
         </a>
     </main>
