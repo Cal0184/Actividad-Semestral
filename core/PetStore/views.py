@@ -3,6 +3,7 @@ from django.contrib.auth import login, logout, authenticate
 from .forms import RegistroUser, LoginUser
 from .models import Usuario, Region
 from django.contrib.auth.decorators import login_required
+from django.utils import timezone
 
 # Create your views here.
 def principal(request):
@@ -34,11 +35,24 @@ def carrito(request):
 
 def registro(request):
     if request.method == 'POST':
+        print("funciona 1")
         form = RegistroUser(request.POST)
+        form.date_joined=timezone.now
         if form.is_valid():
+            print("Funciona 2")
             user = form.save()
             login(request, user)
             return redirect('principal')
+        else:
+            print("no funciona")
+            #print(request.POST)
+            #print(form.errors)
+            form = RegistroUser()
+            context = {
+                "mensaje":"No funciona",
+                "form":form
+            }
+            return render(request,"registro.html",context)
     else:
         form = RegistroUser()
     return render(request, 'registro.html', {'form': form})

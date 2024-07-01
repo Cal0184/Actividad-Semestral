@@ -6,13 +6,14 @@
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/s.carrito.css' %}">
     <title>Productos</title>
 </head>
 
     <body class="img_background">
         {% include 'base/header.html' %}
         {% include 'base/modalProductos.html' %}
-
+	
         <main>
             <br>
             <div class="container">
@@ -24,10 +25,32 @@
                     <option value="{% url "higiene" %}">Higiene</option>
                 </select>
             </div>
+            
             <br>
     {% comment %} todo: productos {% endcomment %}
             <div id="margenC" class="row row-cols-1 row-cols-md-2 g-4">
                 <!-- *Producto 1 -->
+                <div class="container-items">
+                    <div class="item">
+                        <figure>
+                            <img
+                                src="../static/img/Productos/Accesorios/CastilloMascota.jpg"
+                                alt="producto"
+                            />
+                            
+                        </figure>
+                        <div class="info-product">
+                            <h2>Zapatos Nike</h2>
+                            <p class="price">$80</p>
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalCastilloGato">
+                                Descripción
+                            </button>
+                            <button class="btn btn-primary-add-cart">Añadir al carrito</button>
+                        </div>
+                    </div>
+
+                    
+                    
                 <div class="col">
                     <div class="card mb-3" style="max-width: 540px;">
                         <div class="row g-0">
@@ -504,52 +527,12 @@
                     </div>
                 </div>
 
-                <div class="col">
-                    <div class="card mb-3" style="max-width: 540px;">
-                        <div class="row g-0">
-                            <div class="col-md-4">
-                            <img src="../static/img/Productos/Higiene/shampoo.jpg" class="img-fluid rounded-start" alt="100">
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <h5 class="card-title">Shampoo</h5>
-                                    <p class="card-text">
-                                        El shampoo para mascotas es un producto diseñado específicamente 
-                                        para limpiar el pelaje de perros y gatos. Está formulado para ser 
-                                        suave y seguro, eliminando la suciedad y los olores mientras cuida 
-                                        la piel sensible de las mascotas.</p>
-                                    <p class="card-text"><small class="text-body">$7.000</small></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> 
-
-                <div class="col">
-                    <div class="card mb-3" style="max-width: 540px;">
-                        <div class="row g-0">
-                            <div class="col-md-4">
-                            <img src="../static/img/Productos/Higiene/perfume.jpg" class="img-fluid rounded-start" alt="100">
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <h5 class="card-title">Perfume</h5>
-                                    <p class="card-text">
-                                        El perfume para mascotas es un producto diseñado para proporcionar un aroma agradable
-                                         al pelaje de perros y gatos. Está formulado con ingredientes suaves y seguros 
-                                         para la piel de las mascotas, ofreciendo una opción para mantenerlas frescas y 
-                                         con un olor agradable entre baños de 300 ML.</p>
-                                    <p class="card-text"><small class="text-body">$9.000</small></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> 
 
     {% comment %} todo: productos {% endcomment %}
         </main>
         {% include 'base/footer.html' %}
             <script src="{% static 'js/funcion.js' %}"></script>
             <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+            <script src="{% static 'js/f.carrito.js' %}"></script>
     </body>
 </html>

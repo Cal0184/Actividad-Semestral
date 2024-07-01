@@ -18,7 +18,7 @@
                 <h2>Registro de usuario</h2>
             </div>
             <br>
-            <form method="POST">
+            <form action="{% url "registro" %}" method="POST">
                 {% csrf_token %}
                 <div class="form-group">
                     <label for="id_nombre">Nombre</label>
@@ -38,6 +38,11 @@
                 <div class="form-group">
                     <label for="id_pass1">Constraseña</label>
                     {{ form.password1 }}
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="id_pass1">Confirmar Contraseña</label>
+                    {{ form.password2 }}
                 </div>
                 <br>
                 <div class="form-group">

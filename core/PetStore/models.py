@@ -19,7 +19,7 @@ class Usuario(AbstractUser):
         return (
             str (self.email)
             +" "
-            +str (self.first_name)
+            +str (self.username)
             +" "
             +str(self.last_name))
     
