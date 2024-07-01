@@ -11,6 +11,8 @@
 
 <body class="img_background">
     {% include 'base/header.html' %}
+    {% include 'base/modalProductos.html' %}
+
     <main>
         <br>
         <div class="container">
@@ -35,9 +37,10 @@
                         <div class="col-md-8">
                             <div class="card-body">
                                 <h5 class="card-title">Alfombra para arenero</h5>
-                                <p class="card-text">Una solución práctica para mantener la limpieza alrededor del arenero de tu gato, 
-                                    capturando eficazmente la arena y los residuos con su diseño texturizado y fácil de limpiar.</p>
                                 <p class="card-text"><small class="text-body">$25.000</small></p>
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalAlfombraGato">
+                                    Descripción
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -54,10 +57,11 @@
                         <div class="col-md-8">
                             <div class="card-body">
                                 <h5 class="card-title">Set recoge deshechos</h5>
-                                <p class="card-text">Conjunto de herramientas ergonómicas para limpiar los desechos de mascotas de manera rápida y eficiente. 
-                                    Ideal para mantener la higiene en interiores y exteriores.</p>
                                 <p class="card-text"><small class="text-body">$5.000</small></p>
                             </div>
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalBolsa">
+                                Descripción
+                            </button>
                         </div>
                     </div>
                 </div>

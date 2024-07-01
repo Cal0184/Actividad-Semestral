@@ -38,26 +38,6 @@ main{
     margin: 50px;
 }
 
-#chackLabel{
-    font-size: 25px;
-    padding-top: 19px;
-    margin: 15;
-}
-
-#carritoTittle{
-    font-size: 300%;
-    text-align: center;
-}
-
-#carritoBody{
-    margin: 20px;
-    font-size: 175%;
-}
-#carritoPrecio{
-    text-align: end;
-    padding-top: 50px;
-    font-size: 200%;
-}
 
 #margenB{
     margin-bottom: 20px;
@@ -101,4 +81,9 @@ main{
     font-size: 50px;
     font-weight: bold;
     color: lightgray;
+}
+
+.precio {
+    font-size: 50px;
+    color: red;
 }

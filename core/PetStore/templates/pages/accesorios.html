@@ -11,6 +11,8 @@
 
 <body class="img_background">
     {% include 'base/header.html' %}
+    {% include 'base/modalProductos.html' %}
+
     <main>
         <br>
         <div class="container">
@@ -35,10 +37,10 @@
                         <div class="col-md-8">
                             <div class="card-body">
                                 <h5 class="card-title">Castillo de gato</h5>
-                                <p class="card-text">El Castillo de Gato es el juguete perfecto para tu felino consentido, 
-                                    ofreciendo diversión y confort en múltiples niveles. Construido con materiales duraderos y suaves,
-                                     proporciona un refugio seguro para jugar, descansar y afilar las garras de tu gato.</p>
-                                     <p class="card-text"><small class="text-body">$90.000</small></p>
+                                <p class="precio">$90.000</p>
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalCastilloGato">
+                                    Descripción
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -55,10 +57,11 @@
                         <div class="col-md-8">
                             <div class="card-body">
                                 <h5 class="card-title">Collar de cuero sintético</h5>
-                                <p class="card-text">Un elegante collar para mascotas fabricado con cuero sintético, ideal para perros y gatos. 
-                                    Combina durabilidad con un estilo clásico, ofreciendo comodidad y resistencia al desgaste. </p>
                                 <p class="card-text"><small class="text-body">$4.000</small></p>
                             </div>
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalCollarCuero">
+                                Descripción
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -74,16 +77,16 @@
                         <div class="col-md-8">
                             <div class="card-body">
                                 <h5 class="card-title">Correa</h5>
-                                <p class="card-text">La correa de perro reflectante Lazer Brite® mantiene a su perro seguro 
-                                    y fácilmente visible con material reflectante, asegurando una visibilidad 
-                                    a la distancia.
-                                    </p>
-                                    <p class="card-text"><small class="text-body">$4.000</small></p>
+                                <p class="card-text"><small class="text-body">$4.000</small></p>
                             </div>
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalComidaMascota">
+                                Descripción
+                            </button>
                         </div>
                     </div>
                 </div>
             </div> 
+
 
             <!-- *Producto 4 -->
             <div class="col">
@@ -95,11 +98,11 @@
                         <div class="col-md-8">
                             <div class="card-body">
                                 <h5 class="card-title">Hueso masticable</h5>
-                                <p class="card-text">Está fabricado con goma resistente de alta calidad, diseñada 
-                                    para soportar el juego más enérgico de tu mascota. No importa cuánto 
-                                    muerda o tire, este juguete resistirá el paso del tiempo.</p>
-                                    <p class="card-text"><small class="text-body">$2.000</small></p>
+                                <p class="card-text"><small class="text-body">$2.000</small></p>
                             </div>
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalJugueteMascotaa">
+                                Descripción
+                            </button>
                         </div>
                     </div>
                 </div>

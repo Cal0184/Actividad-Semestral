@@ -11,6 +11,8 @@
 
     <body class="img_background">
         {% include 'base/header.html' %}
+        {% include 'base/modalProductos.html' %}
+
         <main>
             <br>
             <div class="container">
@@ -35,10 +37,10 @@
                             <div class="col-md-8">
                                 <div class="card-body">
                                     <h5 class="card-title">Castillo de gato</h5>
-                                    <p class="card-text">El Castillo de Gato es el juguete perfecto para tu felino consentido, 
-                                        ofreciendo diversión y confort en múltiples niveles. Construido con materiales duraderos y suaves,
-                                         proporciona un refugio seguro para jugar, descansar y afilar las garras de tu gato..</p>
-                                    <p class="card-text"><small class="text-body">$90.000</small></p>
+                                    <p class="precio">$90.000</p>
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalCastilloGato">
+                                        Descripción
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -54,9 +56,10 @@
                             <div class="col-md-8">
                                 <div class="card-body">
                                     <h5 class="card-title">Alfombra para arenero</h5>
-                                    <p class="card-text">Una solución práctica para mantener la limpieza alrededor del arenero de tu gato, 
-                                        capturando eficazmente la arena y los residuos con su diseño texturizado y fácil de limpiar.</p>
                                     <p class="card-text"><small class="text-body">$25.000</small></p>
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalAlfombraGato">
+                                        Descripción
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -73,10 +76,11 @@
                             <div class="col-md-8">
                                 <div class="card-body">
                                     <h5 class="card-title">Collar de cuero sintético</h5>
-                                    <p class="card-text">Un elegante collar para mascotas fabricado con cuero sintético, ideal para perros y gatos. 
-                                        Combina durabilidad con un estilo clásico, ofreciendo comodidad y resistencia al desgaste. </p>
                                     <p class="card-text"><small class="text-body">$4.000</small></p>
                                 </div>
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalCollarCuero">
+                                    Descripción
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -91,11 +95,11 @@
                             <div class="col-md-8">
                                 <div class="card-body">
                                     <h5 class="card-title">Comida Pedigree Adulto</h5>
-                                    <p class="card-text">Alimento completo y balanceado para perros adultos, 
-                                        formulado por Pedigree para satisfacer las necesidades nutricionales de tu mascota.
-                                         Enriquecido con vitaminas, minerales y proteínas de alta calidad para apoyar la salud y vitalidad de tu perro.</p>
                                     <p class="card-text"><small class="text-body">$6.000</small></p>
                                 </div>
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalComidaMascota">
+                                    Descripción
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -111,12 +115,11 @@
                             <div class="col-md-8">
                                 <div class="card-body">
                                     <h5 class="card-title">Correa</h5>
-                                    <p class="card-text">La correa de perro reflectante Lazer Brite® mantiene a su perro seguro 
-                                        y fácilmente visible con material reflectante, asegurando una visibilidad 
-                                        a la distancia.
-                                        </p>
                                     <p class="card-text"><small class="text-body">$4.000</small></p>
                                 </div>
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalComidaMascota">
+                                    Descripción
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -131,10 +134,11 @@
                             <div class="col-md-8">
                                 <div class="card-body">
                                     <h5 class="card-title">Set recoge deshechos</h5>
-                                    <p class="card-text">Conjunto de herramientas ergonómicas para limpiar los desechos de mascotas de manera rápida y eficiente. 
-                                        Ideal para mantener la higiene en interiores y exteriores.</p>
                                     <p class="card-text"><small class="text-body">$5.000</small></p>
                                 </div>
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalBolsa">
+                                    Descripción
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -150,11 +154,11 @@
                             <div class="col-md-8">
                                 <div class="card-body">
                                     <h5 class="card-title">Hueso masticable</h5>
-                                    <p class="card-text">Está fabricado con goma resistente de alta calidad, diseñada 
-                                        para soportar el juego más enérgico de tu mascota. No importa cuánto 
-                                        muerda o tire, este juguete resistirá el paso del tiempo.</p>
                                     <p class="card-text"><small class="text-body">$2.000</small></p>
                                 </div>
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalJugueteMascotaa">
+                                    Descripción
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -169,10 +173,11 @@
                             <div class="col-md-8">
                                 <div class="card-body">
                                     <h5 class="card-title">Comida Pedigree Cachorro</h5>
-                                    <p class="card-text">Alimento completo y equilibrado diseñado específicamente para cachorros, proporcionando los nutrientes esenciales para un crecimiento saludable y un desarrollo óptimo.
-                                         Desarrollado por Pedigree para apoyar la salud y vitalidad desde temprana edad.</p>
                                     <p class="card-text"><small class="text-body">$30.000</small></p>
                                 </div>
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalComidaCachorro">
+                                    Descripción
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -188,12 +193,11 @@
                             <div class="col-md-8">
                                 <div class="card-body">
                                     <h5 class="card-title">Collar tipo Bandana</h5>
-                                    <p class="card-text">Hermoso collar eco-cuero para perros tamaño M
-                                        Largo ajustable (cuello): 27 a 34 centímetros.
-                                        Para mascotas con estilo.
-                                        </p>
                                     <p class="card-text"><small class="text-body">$5.000</small></p>
                                 </div>
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalBandanaTipoA">
+                                    Descripción
+                                </button>
                             </div>
                         </div>
                     </div>

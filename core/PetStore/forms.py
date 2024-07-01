@@ -1,5 +1,5 @@
 from django import forms
-from .models import Region, Usuario, TipoProducto, Productos, tipoAnimal, Animal
+from .models import Region, Usuario, TipoProducto, Productos, TipoAnimal, Animal
 from django.contrib.auth.forms import AuthenticationForm
 from django.forms import ModelForm
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm

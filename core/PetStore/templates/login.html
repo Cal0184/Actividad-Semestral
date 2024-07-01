@@ -10,42 +10,50 @@
 </head>
 <body class="img_background">
     {% include 'base/header.html' %}
-    <main><center>
+    <main>
         <br>
         <div class="container">
-            <div class="row row-cols-md-4">
+            <div class="row row-cols-md-4 justify-content-center">
                 <h2>Iniciar Sesión</h2>
             </div>
             <br>
-            <form method="POST">
-                {% csrf_token %}
-                <div class="form-group">
-                    <label for="id_username">Correo</label>
-                    {{ form.username }}
-                </div>
-                <br>
-                <div class="form-group">
-                    <label for="id_password">Contraseña</label>
-                    {{ form.password }}
-                </div>
-                <div class="container">
-                    <div class="col">
-                        <div class="row-6">
-                            <button type="submit" class="btn btn-primary">Iniciar sesión</button>
-                        </div>
+            <center>
+                <form method="POST">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="id_username">Correo</label>
+                        {{ form.username }}
                     </div>
-                </div>
-            </form>
+                    <br>
+                    <div class="form-group">
+                        <label for="id_password">Contraseña</label>
+                        {{ form.password }}
+                    </div>
+                </form>
+                <br>
+                <br>
+            </center>
         </div>
-    </center>
-
-        <a href="{% url "registro" %}">
-            <br>
-            <br>
-            <button class="btn btn-light">
-                Registrarsee
-            </button>
-        </a>
+        <br>
+        <br>
+        <div class="row row-cols-md-4 justify-content-center">
+            <div class="row row-cols-md-4">
+                <a href="{% url "registro" %}">
+                    <button class="btn btn-light">
+                        Registrarse
+                    </button>
+                </a>
+            </div>
+            <div class="col-2">
+                <div class="row-6">
+                    <button type="submit" class="btn btn-primary">Iniciar sesión</button>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
     </main>
     {% include 'base/footer.html' %}
     <script src="{% static 'js/funcion.js' %}"></script>

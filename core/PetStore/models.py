@@ -34,7 +34,8 @@ class Productos(models.Model):
     precio = models.IntegerField(db_column="Precio")
     tipo = models.ForeignKey("TipoProducto", on_delete=models.CASCADE, db_column="Tipo")
 
-class tipoAnimal(models.Model):
+
+class TipoAnimal(models.Model):
     id_tipo = models.IntegerField(unique=True, primary_key=True,db_column="Tipo_Animal")
     tipo = models.CharField(max_length=200,blank=False, null=False )
 

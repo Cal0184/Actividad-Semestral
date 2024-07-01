@@ -29,6 +29,9 @@ def alimentos(request):
 def accesorios(request):
     return render(request, 'pages/accesorios.html')
 
+def carrito(request):
+    return render(request, 'pages/carrito.html')
+
 def registro(request):
     if request.method == 'POST':
         form = RegistroUser(request.POST)
